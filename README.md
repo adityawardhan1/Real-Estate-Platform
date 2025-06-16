@@ -94,3 +94,5 @@ Pull requests are welcome. For major changes, open an issue first to discuss wha
 
 📄 License
 MIT License — feel free to use and adapt for your own real estate project.
+
+
