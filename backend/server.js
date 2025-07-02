@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const propertyRoutes = require("./routes/propertyRoutes"); // ✅ Import your property routes
+const propertyRoutes = require("./routes/propertyRoutes"); // Your existing routes
+const chatRoutes = require("./routes/chat"); // ✅ Add this line to import chatbot route
 
 const app = express();
 
@@ -15,7 +16,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
-app.use("/api/properties", propertyRoutes); // ✅ Mount property API route
+app.use("/api/properties", propertyRoutes);
+app.use("/api/chat", chatRoutes); // ✅ Mount the chatbot API
 
 // Connect to MongoDB and start server
 mongoose

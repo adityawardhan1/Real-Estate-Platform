@@ -1,6 +1,7 @@
 # Node.js
 node_modules/
 .env
+*.env
 
 # Logs
 *.log
@@ -15,3 +16,5 @@ dist/
 # React
 client/node_modules/
 client/build/
+frontend/node_modules/
+frontend/build/

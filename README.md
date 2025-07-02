@@ -1,98 +1,102 @@
- 🏠 Real Estate Platform
+# 🏡 Real Estate Platform
 
-A full-stack real estate listing platform built with the **MERN stack** (MongoDB, Express.js, React, Node.js). Users can view, post, and manage property listings with modern UI and RESTful API.
+A full-stack real estate listing and advisory platform built with the **MERN stack** (MongoDB, Express.js, React, Node.js). Users can browse, post, and manage properties, with an intelligent real estate chatbot assistant for quick help.
 
 ---
 
-## 📌 Features
+## ✨ Features
 
-- 🔍 Browse available properties
-- 📄 Add new property listings (with price, images, location, etc.)
-- 🏷️ Filter by type (flat, house, apartment, land)
-- 💰 Buy, sell, or rent properties
-- 🔐 User authentication & role-based control *(coming soon)*
+- 🔍 Browse and filter real estate listings
+- 📤 Post properties with title, images, price, and location
+- 🏷️ Filter by type: apartment, land, flat, etc.
+- 💬 Real estate chatbot assistant (for stamp duty, RERA, home loan info, and more)
+- 🔐 User auth & admin control *(coming soon)*
+
+---
+
+## 🧠 Real Estate Chatbot
+
+Get instant answers to common property questions like:
+- 🏷️ Stamp duty rates in Delhi
+- 🏛️ RERA registration process
+- 🏦 Home loan eligibility
+- 📄 Legal documents required for buying/selling
+
+Powered by OpenRouter API with GPT-based responses.
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
+### 🔹 Frontend
 - React.js
 - React Router DOM
-- CSS (custom styling)
+- Axios
+- Custom CSS
 
-**Backend:**
+### 🔹 Backend
 - Node.js
 - Express.js
-- MongoDB & Mongoose
+- MongoDB + Mongoose
+- OpenRouter AI API
 
 ---
 
-## 📂 Project Structure
+## 🗂️ Project Structure
 
 real-estate-platform/
-│
 ├── backend/
 │ ├── models/
-│ │ └── Property.js
 │ ├── routes/
-│ │ └── propertyRoutes.js
 │ ├── server.js
 │ └── .env
-│
 ├── frontend/
 │ ├── src/
 │ │ ├── components/
-│ │ │ └── Navbar.js
 │ │ ├── pages/
-│ │ │ └── Properties.js
-│ │ ├── App.js
-│ │ └── index.js
+│ │ └── App.js
 │ └── public/
-│
-├── .gitignore
+├── README.md
 ├── package.json
-└── README.md
+└── .gitignore
 
-yaml
-Copy
-Edit
+
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repo
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/adityawardhan1/Real-Estate-Platform.git
 cd Real-Estate-Platform
 2. Setup Backend
-bash
-Copy
-Edit
+
 cd backend
 npm install
-# Add your Mongo URI to .env
+
+# Create .env file
 touch .env
-# Add: MONGO_URI=your_connection_string
+# Add your config:
+# MONGO_URI=your_mongo_uri
+# OPENROUTER_API_KEY=your_openrouter_api_key
+
 npm start
 3. Setup Frontend
-bash
-Copy
-Edit
+
 cd ../frontend
 npm install
 npm start
 🌐 API Endpoints
 Method	Endpoint	Description
-GET	/api/properties	Fetch all properties
-POST	/api/properties	Add new property
+GET	/api/properties	Get all properties
+POST	/api/properties	Add new property listing
+POST	/api/chat	Ask question to chatbot
 
-🙌 Contributing
-Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
-
-📄 License
-MIT License — feel free to use and adapt for your own real estate project.
+🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to update.
 
 
+
+Created with ❤️ by Aditya Wardhan
