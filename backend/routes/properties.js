@@ -1,18 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const Property = require('../models/Property');
+const staticProperties = require('../data/properties'); // Import static list
 
-// GET all properties
+// GET all (DB + static)
 router.get('/', async (req, res) => {
   try {
-    const properties = await Property.find();
-    res.json(properties);
+    const dbProperties = await Property.find();
+    const all = [...staticProperties, ...dbProperties];
+    res.json(all);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch properties' });
   }
 });
 
-// POST a new property
+// POST new dynamic property to DB
 router.post('/', async (req, res) => {
   const { title, location, price, image } = req.body;
   try {
